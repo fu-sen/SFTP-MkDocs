@@ -16,11 +16,11 @@
 6. Select `New repository secrets`.
 7. Add the following name and value:
     - SFTP_HOST: SFTP server name
-    - SFTP_PORT: SFTP port number
+    - SFTP_PORT: SFTP port number (optional)
     - FTP_SUSERNAME: SFTP user name
-    - FTP_SPASSWORD: SFTP password
-    - SFTP_PRIVATEKEY: SSH private key
-    - SFTP_PASSPHASE: Passphase of SSH private key
+    - FTP_SPASSWORD: SFTP password (optional)
+    - SFTP_PRIVATEKEY: SSH private key (optional)
+    - SFTP_PASSPHASE: Passphase of SSH private key (optional)
     - SFTP_REMOTEDIR: Destination SFTP server directory
 8. Commit to a GitHub project: `git push`
 
