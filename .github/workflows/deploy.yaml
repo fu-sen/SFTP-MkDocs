@@ -1,0 +1,21 @@
+name: Deploy Website
+on: [push]
+jobs:
+  deploy:
+    runs-on:  macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+      - uses: wangyucode/sftp-upload-action@v2.0.4
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          privateKey: ${{ secrets.SFTP_PRIVATEKEY }}
+          passphrase: ${{ secrets.SFTP_PASSPHASE }}
+          localDir: ./site/
+          remoteDir: ${{ secrets.SFTP_REMOTEDIR }}
+          exclude: '.git'
