@@ -1,8 +1,8 @@
 <!-- 2025/06/22 MkDocs 1.6.1 -->
 
-## FTP-MkDocs
+## SFTP-MkDocs
 
-**MkDocs with FTP (minimal configuration)**
+**MkDocs with SFTP (minimal configuration)**
 
 - [MkDocs](https://www.mkdocs.org/)
 
@@ -15,11 +15,13 @@
 5. Select `Actions`
 6. Select `New repository secrets`.
 7. Add the following name and value:
-    - FTP_SERVER: FTP server name
-    - FTP_USERNAME: FTP user name
-    - FTP_PASSWORD: FTP password
-    - FTP_PROTOCOL: `ftp` or `ftps` (`ftps` is recommended)
-    - FTP_SERVERDIR: Destination FTP server directory ()
+    - SFTP_HOST: SFTP server name
+    - SFTP_PORT: SFTP port number
+    - FTP_SUSERNAME: SFTP user name
+    - FTP_SPASSWORD: SFTP password
+    - SFTP_PRIVATEKEY: SSH private key
+    - SFTP_PASSPHASE: Passphase of SSH private key
+    - SFTP_REMOTEDIR: Destination SFTP server directory
 8. Commit to a GitHub project: `git push`
 
 Please check with your FTP client before configuring.  
