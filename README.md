@@ -1,4 +1,4 @@
-<!-- 2025/06/22 MkDocs 1.6.1 -->
+<!-- 2025/08/10 MkDocs 1.6.1 -->
 
 ## SFTP-MkDocs
 
@@ -24,7 +24,7 @@
     - SFTP_REMOTEDIR: Destination SFTP server directory
 8. Commit to a GitHub project: `git push`
 
-Please check with your FTP client before configuring.  
+Please check with your FTP client before configuring.
 
 ## Build error
 
